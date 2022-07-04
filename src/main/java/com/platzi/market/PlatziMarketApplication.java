@@ -10,5 +10,4 @@ public class PlatziMarketApplication {
 		SpringApplication.run(PlatziMarketApplication.class, args);
 	}
 
-	private String valentina;
 }
