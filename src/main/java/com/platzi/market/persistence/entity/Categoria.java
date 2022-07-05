@@ -14,9 +14,9 @@ import java.util.List;
 
 
         private String descripcion;
-
-
         private Boolean estado;
+
+
 
         @OneToMany(mappedBy = "categoria")
         private List<Producto> productos;
@@ -56,5 +56,8 @@ import java.util.List;
         public void setProductos(List<Producto> productos) {
             this.productos = productos;
         }
+
+
+
     }
 

@@ -46,6 +46,7 @@ public class Producto {
     }
 
     public String getNombre() {
+
         return nombre;
     }
 
@@ -54,6 +55,7 @@ public class Producto {
     }
 
     public Integer getIdCategoria() {
+
         return idCategoria;
     }
 
@@ -77,7 +79,8 @@ public class Producto {
         this.precioVenta = precioVenta;
     }
 
-    public Integer getCantidadStock() {
+    public Integer getCantidadStock()
+    {
         return cantidadStock;
     }
 
@@ -85,7 +88,8 @@ public class Producto {
         this.cantidadStock = cantidadStock;
     }
 
-    public boolean isEstado() {
+    public boolean isEstado()
+    {
         return estado;
     }
 
@@ -93,6 +97,13 @@ public class Producto {
         this.estado = estado;
     }
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 }
 
 

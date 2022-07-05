@@ -3,6 +3,7 @@ package com.platzi.market.domain.service;
 import com.platzi.market.domain.Product;
 import com.platzi.market.domain.respository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,24 +14,29 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public List<Product> getALL (){
+    public List<Product> getALL() {
         return productRepository.getALL();
     }
 
-    public Optional<Product> getProduct (int productId) {
+    public Optional<Product> getProduct(int productId) {
         return productRepository.getProduct(productId);
     }
-    public Optional<Product> getByProduct (int categoryId) {
-        return productRepository.getProduct(categoryId);
+
+    public Optional<List<Product>> getByCategory(int categoryId) {
+        return productRepository.getByCategory(categoryId);
     }
-    public Product save (Product product){
+
+    public Product save(Product product) {
         return productRepository.save(product);
     }
 
     public boolean delete(int productId) {
-        return getByProduct(productId).map(product -> {
-            productRepository.delete (productId);
+        try {
+            productRepository.delete(productId);
             return true;
-        }).orElse(false);
+        } catch (EmptyResultDataAccessException e) {
+            return false;
+        }
+
     }
 }
