@@ -37,27 +37,19 @@ public class Producto {
 
 
 
-    public Integer getIdProducto() {
-        return idProducto;
-    }
+    public Integer getIdProducto() {return idProducto;}
 
     public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
 
-    public String getNombre() {
-
-        return nombre;
-    }
+    public String getNombre() {return nombre;}
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public Integer getIdCategoria() {
-
-        return idCategoria;
-    }
+    public Integer getIdCategoria() {return idCategoria;}
 
     public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
@@ -97,13 +89,9 @@ public class Producto {
         this.estado = estado;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
+    public Categoria getCategoria() {return categoria;}
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+    public void setCategoria(Categoria categoria) {this.categoria = categoria;}
 }
 
 
